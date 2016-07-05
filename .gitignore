@@ -3,3 +3,6 @@ server.js
 test.js
 package.json
 .DS_Store
+.provision
+.vagrant
+Vagrantfile
