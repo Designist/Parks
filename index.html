@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Parks of Rhode Island Test!</title>
+        <title>Parks of Rhode Island</title>
         <meta charset='utf-8'>
         <script type="text/javascript" src='js/jquery.js '></script>
         <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
@@ -58,6 +58,8 @@
                 <option value="Swimming">Swimming</option>
                 <option value="Walking">Walking</option>
             </select>
+            <input id="locField" type="text" placeholder="Search by location"></input>
+            <span class="location button">Enter</span>
             <div id="hackSpotsTable"></div>
         </div>
         <div id="info" class="container">
@@ -196,7 +198,7 @@
                     final_dist = Math.round(dist*10)/10.0;
                     gData[i].distance = final_dist;
                     gData[i].distance2 = final_dist.toString() + " Miles Away";
-                    console.log(gData[i].distance2);
+
                 }
                 tableOptions = {
                 "data": gData,
@@ -341,6 +343,10 @@
                 $('#latestSpot').css("display", "inline")
                 $('#selectedSpot').css("display", "none")
                 map.setView([41.5801,-71.4774], 9)
+            })
+
+            $('.location').click(function() {
+
             })
 
             // find total number of spots added

@@ -5,19 +5,7 @@
   small {padding: 10px 0px;}
   #wrapper {margin: 0px auto; max-width: 600px;}
   .button {padding: 5px 4px; background-color: #fff; font-size: 10px;}*/
-  .button:hover {cursor: hand;}
-  input:focus {outline: none;}
 
-/* Table */
-
-  table {text-align: left; width: 100%; border: 1px solid black; background-color: #EFEDE1;}
-  div#tableContainer {clear: both;}
-  th {padding: 10px 0px; border-bottom: 1px solid #ddd;}
-  td, text {padding: 3px 0 3px 0; font-size: 14px;}
-  #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Merriweather; color: #fff; font-size: 13px; height: 22px;}
-  .noMatches {margin-left: 20px; font-size: 11px; font-style: italic; visibility: hidden;}
-
-/* Containers */
   .container {margin: 14px 0px;}
   #map {height: 400px; max-width: 800px; background: #DADADA;}
   #holder {height: 400px; max-width: 600px; background: #FFE4E4;}
@@ -52,8 +40,3 @@
   .leaflet-popup-content h2 {margin-bottom: 4px;}
 
   img.petThumbs {height: 80px; width: 80px; border-radius: 1000px;}
-
-/* Tagboard */
-
-.embed.basic-embed {background: #EAE4CF; background-color: #EAE4CF;}
-.embed .tb-toolbar {display: none;}
