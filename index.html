@@ -351,7 +351,7 @@
                 geocoder.geocode({ 'address': address }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
                         plat = results[0].geometry.location.lat;
-                        plong = results[0].geometry.location.long;
+                        plong = results[0].geometry.location.lng;
                         console.log(plat);
                         console.log(plong);
                         map.setView([plat,plong], 14)
