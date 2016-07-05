@@ -347,6 +347,7 @@
             })
             $('.location').click(function() {
                 geocoder = new google.maps.Geocoder();
+                address = document.getElementById("locField").value;
                 geocoder.geocode({ 'address': address }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
                         plat = results[0].geometry.location.lat;
