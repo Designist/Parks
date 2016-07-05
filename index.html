@@ -352,6 +352,8 @@
                     if (status == google.maps.GeocoderStatus.OK) {
                         plat = results[0].geometry.location.lat;
                         plong = results[0].geometry.location.long;
+                        console.log(plat);
+                        console.log(plong);
                         map.setView([plat,plong], 14)
                     }
                 });
