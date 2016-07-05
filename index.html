@@ -14,6 +14,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
         <link rel="stylesheet" href="css/MarkerCluster.css" />
         <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFlCsx7_Wh6n-TsPQWpUf_P2Wddqg_UZc"> </script>
     </head>
 <body>
     <div class="header">
@@ -58,6 +59,8 @@
                 <option value="Swimming">Swimming</option>
                 <option value="Walking">Walking</option>
             </select>
+            <input id="locField" type="text" placeholder="Input a location"></input>
+            <span class="location button">Update Location</span>
             <div id="hackSpotsTable"></div>
         </div>
         <div id="info" class="container">
@@ -341,6 +344,15 @@
                 $('#latestSpot').css("display", "inline")
                 $('#selectedSpot').css("display", "none")
                 map.setView([41.5801,-71.4774], 9)
+            })
+            $('.location').click(function() {
+                geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ 'address': address }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        plat = results[0].geometry.location.lat;
+                        plong = results[0].geometry.location.long;
+                    }
+                });
             })
 
             // find total number of spots added
