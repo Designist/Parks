@@ -3,6 +3,10 @@ server.js
 test.js
 package.json
 .DS_Store
+<<<<<<< HEAD
 .provision
 .vagrant
 Vagrantfile
+=======
+.vagrant
+>>>>>>> origin/gh-pages
