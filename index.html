@@ -180,14 +180,15 @@
             address = document.getElementById("locField").value;
             geocoder.geocode({ 'address': address }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
+                    document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
                     console.log(results[0])
                     plat = results[0].geometry.location.lat();
                     plong = results[0].geometry.location.lng();
                     console.log(plat);
                     console.log(plong);
+                    showInfo(tableOptions.data);
                 }
             });
-            showInfo(tableOptions.data);
         }
 
         // so long, so messy
@@ -212,7 +213,6 @@
                     final_dist = Math.round(dist*10)/10.0;
                     gData[i].distance = final_dist;
                     gData[i].distance2 = final_dist.toString() + " Miles Away";
-                    console.log(gData[i].distance2);
                 }
                 tableOptions = {
                 "data": gData,
