@@ -1592,28 +1592,56 @@ module.exports.makeupOptionObject = function(lineItem) {
 
 module.exports.createGeoJSON = function(data, optionsJSON) {
   var geoJSON = []
-  data.forEach(function(lineItem){
-    var hasGeo = confirmGeo(lineItem)
-
-    if (hasGeo && !lineItem.lat && !lineItem.long) handleLatLong(lineItem)
-    if (lineItem.linestring || lineItem.multipolygon) hasGeo = true
-    if (!hasGeo) return
-
-    if (!optionsJSON) {
-      optionsJSON = makeupOptionObject(lineItem)
-      var optionObj = buildOptionObject(optionsJSON, lineItem)
-    } else {
-      optionObj = buildOptionObject(optionsJSON, lineItem)
+  data.forEach(function(lineItem) {
+    var valid_marker = true;
+    var e = document.getElementById("activityFilter");
+    var strUser = e.options[e.selectedIndex].value;
+    var dropdown = strUser.toLowerCase();
+    console.log(dropdown);
+    if (strUser != "View All Parks") {
+        if (lineItem[dropdown] == "no") {
+            valid_marker = false;
+        }
     }
-
-    var type = determineType(lineItem)
-
-    if (lineItem.polygon || lineItem.multipolygon || lineItem.linestring) {
-      var shapeFeature = shapeJSON(lineItem, type, optionObj)
-      geoJSON.push(shapeFeature)
+    var searchTerm = document.getElementById("tableFilter").value;
+    var is_IE = !!document.documentMode;
+    var stringObject = JSON.stringify(lineItem).toLowerCase();
+    if (is_IE == false) {
+        var term_array = searchTerm.split(" ");
+        for (var i=0; i<term_array.length; i++) {
+            if ((stringObject.includes(term_array[i].toLowerCase())) == false) {
+                valid_marker = false;
+            }
+        }
     } else {
-      var pointFeature = pointJSON(lineItem, type, optionObj)
-      geoJSON.push(pointFeature)
+      if (!stringObject.match(searchTerm.toLowerCase())) {
+          valid_marker = false;
+      }
+    }
+    console.log(valid_marker);
+    if (valid_marker) {
+        var hasGeo = confirmGeo(lineItem)
+
+        if (hasGeo && !lineItem.lat && !lineItem.long) handleLatLong(lineItem)
+        if (lineItem.linestring || lineItem.multipolygon) hasGeo = true
+        if (!hasGeo) return
+
+        if (!optionsJSON) {
+          optionsJSON = makeupOptionObject(lineItem)
+          var optionObj = buildOptionObject(optionsJSON, lineItem)
+        } else {
+          optionObj = buildOptionObject(optionsJSON, lineItem)
+        }
+
+        var type = determineType(lineItem)
+
+        if (lineItem.polygon || lineItem.multipolygon || lineItem.linestring) {
+          var shapeFeature = shapeJSON(lineItem, type, optionObj)
+          geoJSON.push(shapeFeature)
+        } else {
+          var pointFeature = pointJSON(lineItem, type, optionObj)
+          geoJSON.push(pointFeature)
+          }
       }
   })
   return geoJSON
@@ -1784,7 +1812,7 @@ module.exports.addMarkerLayer = function(geoJSON, map, template, clusterMarkers)
   if (cluster) {
     map.addLayer(clusterGroup)
   } else {
-    layer.addTo(map)
+    layer.addTo(map);
   }
 
   return layer
@@ -16128,14 +16156,15 @@ function searchTable(opts, searchTerm) {
   var strUser = e.options[e.selectedIndex].value;
   var dropdown = strUser.toLowerCase();
   if (is_IE == false) {
-    term_array = searchTerm.split(" ");
+    var term_array = searchTerm.split(" ");
     opts.data.forEach(function(object) {
       var stringObject = JSON.stringify(object).toLowerCase();
       var does_match = true;
       for (var i=0; i<term_array.length; i++) {
           if ((stringObject.includes(term_array[i].toLowerCase())) == false) {
-            does_match = false;
-          }}
+              does_match = false;
+          }
+      }
       if (strUser != "View All Parks") {
         if (object[dropdown] == "no") {
           does_match = false;
@@ -16180,7 +16209,7 @@ function sortThings(opts, sorter, sorted, tableDiv) {
     return 0
   })
   if (sorted === "descending") opts.data.reverse();
-  searchTerm = document.getElementById("tableFilter").value;
+  var searchTerm = document.getElementById("tableFilter").value;
   searchTable(opts, searchTerm);
   var header
   $(tableDiv + " .tHeader").each(function(i, el){
