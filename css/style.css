@@ -17,6 +17,7 @@
   #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Merriweather; color: #fff; font-size: 13px; height: 22px;}
   #locField {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Lato; color: #333; font-size: 13px; height: 22px; margin-left: 20px;}
 
+  .noMatches {margin-left: 5px; margin-right: 5px; font-size: 11px; font-style: italic; visibility: hidden;}
 
 /* Containers */
   .container {margin: 14px 0px;}
