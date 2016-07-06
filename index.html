@@ -203,6 +203,7 @@
                     $("#distHeader").click();
                     $("#distHeader").trigger('click');
                     eventFire(document.getElementById('distHeader'), 'click');
+                    map.setView([plat, plong], 14)
                 }
             });
         }
