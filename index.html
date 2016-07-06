@@ -152,6 +152,7 @@
     // prompts user for location
         var x = document.getElementById("demo");
         var dist_column = false;
+        var map_loaded = false;
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
@@ -178,6 +179,16 @@
                 Tabletop.init({ key: URL, callback: showInfo, simpleSheet: true });
         })
 
+        function eventFire(el, etype) {
+            if (el.fireEvent) {
+                el.fireEvent('on' + etype);
+            } else {
+                var evObj = document.createEvent('Events');
+                evObj.initEvent(etype, true, false);
+                el.dispatchEvent(evObj);
+            }
+        }
+
         function updateLoc() {
             geocoder = new google.maps.Geocoder();
             address = document.getElementById("locField").value;
@@ -186,12 +197,12 @@
                     if (dist_column == false) {
                         document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
                     }
-                    console.log(results[0])
                     plat = results[0].geometry.location.lat();
                     plong = results[0].geometry.location.lng();
-                    console.log(plat);
-                    console.log(plong);
                     showInfo(tableOptions.data);
+                    $("#distHeader").click();
+                    $("#distHeader").trigger('click');
+                    eventFire(document.getElementById('distHeader'), 'click');
                 }
             });
         }
@@ -235,9 +246,12 @@
             var geoJSON = Sheetsee.createGeoJSON(gData, optionsJSON)
 
             // create map, tilelayer (map background), markers and popups
-            var map = Sheetsee.loadMap("map")
-            Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
-            var markerLayer = Sheetsee.addMarkerLayer(geoJSON, map, "<h2>{{ name }}</h2>", true)
+            if (map_loaded == false) {
+                map = Sheetsee.loadMap("map")
+                Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
+                markerLayer = Sheetsee.addMarkerLayer(geoJSON, map, "<h2>{{ name }}</h2>", true)
+                map_loaded = true
+            }
 
             // find the latest spot with the most important
             // info filled in (to prevent map breaking if
