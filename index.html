@@ -184,7 +184,7 @@
             }
         }
         function showPosition(position) {
-            if (typeof plat !== 'undefined') {
+            if (typeof plat == 'undefined') {
                 document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
             }
             plat = position.coords.latitude;
