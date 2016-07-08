@@ -39,7 +39,6 @@ code {font-family: "Consolas", "Ubuntu Mono", monospace; line-height: 22px; font
 #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Lato; color: #333; font-size: 13px; height: 22px; margin-left: 20px;}
 #locField {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Lato; color: #333; font-size: 13px; height: 22px; margin-left: 20px;}
 
-
 ::selection {background: #E5FF1D;}
 ::-moz-selection {background: #E5FF1D;}
 
@@ -102,7 +101,7 @@ div#middle {margin-top: 70px;}
 .prev, .next {
     display: block;
     line-height: 1;
-    color: ghostwhite;
+    color: #3E3E0A;
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 25px;
@@ -111,14 +110,11 @@ div#middle {margin-top: 70px;}
 }
 .prev {
     float: left;
-    margin: 50px -5px 0 0; text-indent: 7px;
+    margin: 0px -5px 0 0; text-indent: 7px;
 }
 .next {
-    margin: 50px 0 0 -5px; text-indent: 10px;
+    margin: 0px 0 0 -5px; text-indent: 10px;
     float: right;
 }
-.prev:hover, .next:hover {
-    font-size: 30px;
-    margin-top: 48px;
-}
 .any-class {display:inline-block;}
+button:focus {outline:0;}

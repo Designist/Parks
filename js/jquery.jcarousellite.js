@@ -100,7 +100,7 @@
                 });
 
                 ul.css({
-                    margin: "0",
+                    margin: "20px;",
                     padding: "0",
                     position: "relative",
                     "list-style": "none",
