@@ -108,13 +108,5 @@ div#middle {margin-top: 70px;}
     background: none;
     border: none;
 }
-.prev {
-    float: left;
-    margin: 0px -5px 0 0; text-indent: 7px;
-}
-.next {
-    margin: 0px 0 0 -5px; text-indent: 10px;
-    float: right;
-}
 .any-class {display:inline-block;}
 button:focus {outline:0;}
