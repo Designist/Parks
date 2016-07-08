@@ -216,6 +216,7 @@
             if (typeof tableOptions !== 'undefined') {
                 showInfo(tableOptions.data);
             }
+            eventFire(document.getElementById('distHeader'), 'click');
         }
         getLocation();
 
@@ -246,8 +247,6 @@
                     plat = results[0].geometry.location.lat();
                     plong = results[0].geometry.location.lng();
                     showInfo(tableOptions.data);
-                    $("#distHeader").click();
-                    $("#distHeader").trigger('click');
                     eventFire(document.getElementById('distHeader'), 'click');
                     map.setView([plat, plong], 14)
                 }
