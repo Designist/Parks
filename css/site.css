@@ -97,3 +97,28 @@ div#middle {margin-top: 70px;}
   #hackSpotsTable, #hackSpotsTable2, #map {min-width: 50%;}
   .embed.basic-embed {background: #EAE4CF;}
 }
+
+/* Partner Slider */
+.prev, .next {
+    display: block;
+    line-height: 1;
+    color: ghostwhite;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+.prev {
+    float: left;
+    margin: 50px -5px 0 0; text-indent: 7px;
+}
+.next {
+    margin: 50px 0 0 -5px; text-indent: 10px;
+    float: right;
+}
+.prev:hover, .next:hover {
+    font-size: 30px;
+    margin-top: 48px;
+}
+.any-class {display:inline-block;}

@@ -6,6 +6,7 @@
         <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
         <script type="text/javascript" src='js/sheetsee.js'></script>
         <script type="text/javascript" src='js/leaflet.markercluster.js'></script>
+        <script type="text/javascript" src="js/jquery.jcarousellite.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href='https://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css' rel='stylesheet' />
         <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic'>
@@ -14,6 +15,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
         <link rel="stylesheet" href="css/MarkerCluster.css" />
         <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+
     </head>
     <body>
         <div class="header">
@@ -63,7 +65,28 @@
         <div class="footer">
             <div id="partners">
                 <h3>Partners</h3>
-                <img src="test.png">
+                <div id="slider" style="display: flex; justify-content: space-between;">
+                    <button class="prev">&lsaquo;</button>
+                    <div class="any-class">
+                        <ul>
+                            <li><img src="partners/health.jpg" alt="Department of Health" style="height: 80px; width: auto;"></li>
+                            <li><img src="partners/dem.png" alt="Department of Environmental Management" style="height: 80px; width: auto;"></li>
+                            <li><img src="partners/commerce.png" alt="Department of Commerce" style="height: 80px; width: auto; "></li>
+                            <li><img src="partners/shoreline.png" alt="Shoreline RI" style="height: 80px; width: auto;"></li>
+                            <li><img src="partners/explore.png" alt="Explore RI" style="height: 80px; width: auto;"></li>
+                        </ul>
+                    </div>
+                    <button class="next">&rsaquo;</button>
+                    <div style="clear:both;"></div>
+                </div>
+                <script text="text/javascript">
+                    $(function() {
+                        $(".any-class").jCarouselLite({
+                            btnNext: ".next",
+                            btnPrev: ".prev"
+                        });
+                    });
+                </script>
             </div>
             <div class="divider"></div>
             <div id="contribute">
