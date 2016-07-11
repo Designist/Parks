@@ -13,6 +13,8 @@ h4 {font-family: Lato; font-size: 24px;}
 .footer {background-image: url(../footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
 .footer ul {padding-left: 20px;}
 .footer li {text-align: left; font-size: 18px;}
+/* change width of below element to increase margins */
+.any-class li {width: 120px; height: 80px;}
 .footer a {border-bottom: none; cursor: pointer; color: #3E3E0A;}
 #partners, #contribute, #connect {width: 100%; margin-top: 210px; margin-left: 20px; margin-right: 20px; text-align: center;}
 #contribute {width: 150%;}
