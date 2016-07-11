@@ -39,7 +39,6 @@ code {font-family: "Consolas", "Ubuntu Mono", monospace; line-height: 22px; font
 
 .container {margin: 0px auto;}
 #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Lato; color: #333; font-size: 13px; height: 22px; margin-left: 20px;}
-#locField {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Lato; color: #333; font-size: 13px; height: 22px; margin-left: 20px;}
 
 ::selection {background: #E5FF1D;}
 ::-moz-selection {background: #E5FF1D;}
