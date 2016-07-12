@@ -29,22 +29,34 @@
     <script>
     function popup(biking, hiking, paddling, running, swimming, walking) {
     if (biking == "yes") {
-        document.getElementById("sbiking").style.width="20px";
+        if (document.getElementById("sbiking") !== null) {
+            document.getElementById("sbiking").style.width="20px";
+        }
     }
     if (hiking == "yes") {
-        document.getElementById("shiking").style.width="20px";
+      if (document.getElementById("shiking") !== null) {
+          document.getElementById("shiking").style.width="20px";
+      }
     }
     if (paddling == "yes") {
-        document.getElementById("spaddling").style.width="20px";
+      if (document.getElementById("spaddling") !== null) {
+          document.getElementById("spaddling").style.width="20px";
+      }
     }
     if (running == "yes") {
-        document.getElementById("srunning").style.width="20px";
+      if (document.getElementById("srunning") !== null) {
+          document.getElementById("srunning").style.width="20px";
+      }
     }
     if (swimming == "yes") {
-        document.getElementById("sswimming").style.width="20px";
+      if (document.getElementById("sswimming") !== null) {
+          document.getElementById("sswimming").style.width="20px";
+      }
     }
     if (walking == "yes") {
-        document.getElementById("swalking").style.width="20px";
+      if (document.getElementById("swalking") !== null) {
+          document.getElementById("swalking").style.width="20px";
+      }
     }}
     </script>
     <div class="header">
@@ -355,22 +367,22 @@
             $('#latestSpot').html(latestSpot)
             map.setView([theLatestSpot.lat, theLatestSpot.long], 16)
 
-            if ((theLatestSpot.biking).slice(1,-1).toString() == "yes") {
+            if ((theLatestSpot.biking).slice(1,-1) == "yes") {
                 document.getElementById("rbiking").style.width="10%";
             }
-            if (theLatestSpot.hiking.slice(1,-1).toString() == "yes") {
+            if (theLatestSpot.hiking.slice(1,-1) == "yes") {
                 document.getElementById("rhiking").style.width="10%";
             }
-            if (theLatestSpot.paddling.slice(1,-1).toString() == "yes") {
+            if (theLatestSpot.paddling.slice(1,-1) == "yes") {
                 document.getElementById("rpaddling").style.width="10%";
             }
-            if (theLatestSpot.running.slice(1,-1).toString() == "yes") {
+            if (theLatestSpot.running.slice(1,-1) == "yes") {
                 document.getElementById("rrunning").style.width="10%";
             }
-            if (theLatestSpot.swimming.slice(1,-1).toString() == "yes") {
+            if (theLatestSpot.swimming.slice(1,-1) == "yes") {
                 document.getElementById("rswimming").style.width="10%";
             }
-            if (theLatestSpot.walking.slice(1,-1).toString() == "yes") {
+            if (theLatestSpot.walking.slice(1,-1) == "yes") {
                 document.getElementById("rwalking").style.width="10%";
             }
 
@@ -389,27 +401,27 @@
                 $('#selectedSpot').html(selectedSpot).css("display", "inline")
                 var selectedCoords = [dataElement[0].lat, dataElement[0].long]
                 map.setView(selectedCoords, 16);
-                if ((dataElement[0].biking).slice(1,-1).toString() == "yes") {
+                if ((dataElement[0].biking).slice(1,-1) == "yes") {
                     document.getElementById("biking").style.width="10%";
                     //document.getElementById("sbiking").style.width="20px";
                 }
-                if (dataElement[0].hiking.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].hiking.slice(1,-1) == "yes") {
                     document.getElementById("hiking").style.width="10%";
                     //document.getElementById("shiking").style.width="20px";
                 }
-                if (dataElement[0].paddling.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].paddling.slice(1,-1) == "yes") {
                     document.getElementById("paddling").style.width="10%";
                     //document.getElementById("spaddling").style.width="20px";
                 }
-                if (dataElement[0].running.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].running.slice(1,-1) == "yes") {
                     document.getElementById("running").style.width="10%";
                     //document.getElementById("srunning").style.width="20px";
                 }
-                if (dataElement[0].swimming.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].swimming.slice(1,-1) == "yes") {
                     document.getElementById("swimming").style.width="10%";
                     //document.getElementById("sswimming").style.width="20px";
                 }
-                if (dataElement[0].walking.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].walking.slice(1,-1) == "yes") {
                     document.getElementById("walking").style.width="10%";
                     //document.getElementById("swalking").style.width="20px";
                 }
@@ -448,22 +460,22 @@
                 $('#latestSpot').css("display", "none")
                 $('#selectedSpot').html(selectedSpot).css("display", "inline")
 
-                if ((dataElement[0].biking).slice(1,-1).toString() == "yes") {
+                if ((dataElement[0].biking).slice(1,-1) == "yes") {
                     document.getElementById("biking").style.width="10%";
                 }
-                if (dataElement[0].hiking.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].hiking.slice(1,-1) == "yes") {
                     document.getElementById("hiking").style.width="10%";
                 }
-                if (dataElement[0].paddling.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].paddling.slice(1,-1) == "yes") {
                     document.getElementById("paddling").style.width="10%";
                 }
-                if (dataElement[0].running.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].running.slice(1,-1) == "yes") {
                     document.getElementById("running").style.width="10%";
                 }
-                if (dataElement[0].swimming.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].swimming.slice(1,-1) == "yes") {
                     document.getElementById("swimming").style.width="10%";
                 }
-                if (dataElement[0].walking.slice(1,-1).toString() == "yes") {
+                if (dataElement[0].walking.slice(1,-1) == "yes") {
                     document.getElementById("walking").style.width="10%";
                 }
             })

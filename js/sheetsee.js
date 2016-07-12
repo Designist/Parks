@@ -1,5 +1,3 @@
-$.getScript("https://maps.googleapis.com/maps/api/js?v=3&libraries=places&sensor=false");
-
 ;(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 if (typeof window.Sheetsee === 'undefined') window.Sheetsee = {}; window.Sheetsee = require('sheetsee-core'); var extend = require('lodash.assign'); extend(window.Sheetsee, require('sheetsee-maps'), require('sheetsee-tables')); module.exports = Sheetsee;
 },{"lodash.assign":3,"sheetsee-core":28,"sheetsee-maps":29,"sheetsee-tables":56}],2:[function(require,module,exports){
@@ -1788,49 +1786,6 @@ module.exports.addMarkerLayer = function(geoJSON, map, template, clusterMarkers)
   } else {
     layer.addTo(map)
   }
-
-  var GoogleSearch = L.Control.extend({
-      onAdd: function() {
-        var element = document.createElement("input");
-
-        element.id = "searchBox";
-
-        return element;
-      }
-    });
-
-    (new GoogleSearch).addTo(map);
-
-    var input = document.getElementById("searchBox");
-
-    var searchBox = new google.maps.places.SearchBox(input);
-
-    searchBox.addListener('places_changed', function() {
-      var places = searchBox.getPlaces();
-
-      if (places.length == 0) {
-        return;
-      }
-
-      var group = L.featureGroup();
-
-      places.forEach(function(place) {
-
-        // Create a marker for each place.
-        console.log(places);
-        console.log(place.geometry.location.lat() + " / " + place.geometry.location.lng());
-        var marker = L.marker([
-          place.geometry.location.lat(),
-          place.geometry.location.lng()
-        ]);
-        group.addLayer(marker);
-      });
-
-      group.addTo(map);
-      map.fitBounds(group.getBounds());
-
-    });
-
   return layer
 }
 
