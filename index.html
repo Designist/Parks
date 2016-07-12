@@ -26,6 +26,27 @@
         </script>
     </head>
 <body>
+    <script>
+    function popup(biking, hiking, paddling, running, swimming, walking) {
+    if (biking == "yes") {
+        document.getElementById("sbiking").style.width="20px";
+    }
+    if (hiking == "yes") {
+        document.getElementById("shiking").style.width="20px";
+    }
+    if (paddling == "yes") {
+        document.getElementById("spaddling").style.width="20px";
+    }
+    if (running == "yes") {
+        document.getElementById("srunning").style.width="20px";
+    }
+    if (swimming == "yes") {
+        document.getElementById("sswimming").style.width="20px";
+    }
+    if (walking == "yes") {
+        document.getElementById("swalking").style.width="20px";
+    }}
+    </script>
     <div class="header">
       <div class="container">
         <h1>Get Outdoors RI</h1>
@@ -304,7 +325,7 @@
 
             // create geoJSON with coordinates and other
             // useful bits from the original data
-            var optionsJSON = ["name", "type", "town", "rowNumber", "lat", "long"]
+            var optionsJSON = ["name", "type", "town", "rowNumber", "lat", "long", "biking", "hiking", "paddling", "running", "swimming", "walking"]
             var geoJSON = Sheetsee.createGeoJSON(gData, optionsJSON)
 
             // create map, tilelayer (map background), markers and popups
@@ -313,12 +334,12 @@
                 Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
                 markerLayer = Sheetsee.addMarkerLayer(geoJSON, map,
                     '<h2>{{ name }}' +
-                    '<img id="sbiking" src ="icons/biking.svg" style="width:0%;">' +
-                    '<img id="shiking" src ="icons/hiking.svg" style="width:0%;">' +
-                    '<img id="spaddling" src ="icons/paddling.svg" style="width:0%;">' +
-                    '<img id="srunning" src ="icons/running.svg" style="width:0%;">' +
-                    '<img id="sswimming" src ="icons/swimming.svg" style="width:0%;">' +
-                    '<img id="swalking" src ="icons/walking.svg" style="width:0%;">' +
+                    '<img id="sbiking" src="icons/biking.svg" style="width:0%;">' +
+                    '<img id="shiking" src="icons/hiking.svg" style="width:0%;">' +
+                    '<img id="spaddling" src="icons/paddling.svg" style="width:0%;">' +
+                    '<img id="srunning" src="icons/running.svg" style="width:0%;">' +
+                    '<img id="sswimming" src="icons/swimming.svg" style="width:0%;">' +
+                    '<img id="swalking" src="icons/walking.svg" style="width:0%;" onload="popup({{biking}},{{hiking}},{{paddling}},{{running}},{{swimming}},{{walking}})">' +
                     '<br/> <a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></h2>', true)
                 map_loaded = true
             }
@@ -334,22 +355,22 @@
             $('#latestSpot').html(latestSpot)
             map.setView([theLatestSpot.lat, theLatestSpot.long], 16)
 
-            if (theLatestSpot.biking == "yes") {
+            if ((theLatestSpot.biking).slice(1,-1).toString() == "yes") {
                 document.getElementById("rbiking").style.width="10%";
             }
-            if (theLatestSpot.hiking == "yes") {
+            if (theLatestSpot.hiking.slice(1,-1).toString() == "yes") {
                 document.getElementById("rhiking").style.width="10%";
             }
-            if (theLatestSpot.paddling == "yes") {
+            if (theLatestSpot.paddling.slice(1,-1).toString() == "yes") {
                 document.getElementById("rpaddling").style.width="10%";
             }
-            if (theLatestSpot.running == "yes") {
+            if (theLatestSpot.running.slice(1,-1).toString() == "yes") {
                 document.getElementById("rrunning").style.width="10%";
             }
-            if (theLatestSpot.swimming == "yes") {
+            if (theLatestSpot.swimming.slice(1,-1).toString() == "yes") {
                 document.getElementById("rswimming").style.width="10%";
             }
-            if (theLatestSpot.walking == "yes") {
+            if (theLatestSpot.walking.slice(1,-1).toString() == "yes") {
                 document.getElementById("rwalking").style.width="10%";
             }
 
@@ -368,29 +389,29 @@
                 $('#selectedSpot').html(selectedSpot).css("display", "inline")
                 var selectedCoords = [dataElement[0].lat, dataElement[0].long]
                 map.setView(selectedCoords, 16);
-                if (dataElement[0].biking == "yes") {
+                if ((dataElement[0].biking).slice(1,-1).toString() == "yes") {
                     document.getElementById("biking").style.width="10%";
-                    document.getElementById("sbiking").style.width="20px";
+                    //document.getElementById("sbiking").style.width="20px";
                 }
-                if (dataElement[0].hiking == "yes") {
+                if (dataElement[0].hiking.slice(1,-1).toString() == "yes") {
                     document.getElementById("hiking").style.width="10%";
-                    document.getElementById("shiking").style.width="20px";
+                    //document.getElementById("shiking").style.width="20px";
                 }
-                if (dataElement[0].paddling == "yes") {
+                if (dataElement[0].paddling.slice(1,-1).toString() == "yes") {
                     document.getElementById("paddling").style.width="10%";
-                    document.getElementById("spaddling").style.width="20px";
+                    //document.getElementById("spaddling").style.width="20px";
                 }
-                if (dataElement[0].running == "yes") {
+                if (dataElement[0].running.slice(1,-1).toString() == "yes") {
                     document.getElementById("running").style.width="10%";
-                    document.getElementById("srunning").style.width="20px";
+                    //document.getElementById("srunning").style.width="20px";
                 }
-                if (dataElement[0].swimming == "yes") {
+                if (dataElement[0].swimming.slice(1,-1).toString() == "yes") {
                     document.getElementById("swimming").style.width="10%";
-                    document.getElementById("sswimming").style.width="20px";
+                    //document.getElementById("sswimming").style.width="20px";
                 }
-                if (dataElement[0].walking == "yes") {
+                if (dataElement[0].walking.slice(1,-1).toString() == "yes") {
                     document.getElementById("walking").style.width="10%";
-                    document.getElementById("swalking").style.width="20px";
+                    //document.getElementById("swalking").style.width="20px";
                 }
             })
 
@@ -427,22 +448,22 @@
                 $('#latestSpot').css("display", "none")
                 $('#selectedSpot').html(selectedSpot).css("display", "inline")
 
-                if (dataElement[0].biking == "yes") {
+                if ((dataElement[0].biking).slice(1,-1).toString() == "yes") {
                     document.getElementById("biking").style.width="10%";
                 }
-                if (dataElement[0].hiking == "yes") {
+                if (dataElement[0].hiking.slice(1,-1).toString() == "yes") {
                     document.getElementById("hiking").style.width="10%";
                 }
-                if (dataElement[0].paddling == "yes") {
+                if (dataElement[0].paddling.slice(1,-1).toString() == "yes") {
                     document.getElementById("paddling").style.width="10%";
                 }
-                if (dataElement[0].running == "yes") {
+                if (dataElement[0].running.slice(1,-1).toString() == "yes") {
                     document.getElementById("running").style.width="10%";
                 }
-                if (dataElement[0].swimming == "yes") {
+                if (dataElement[0].swimming.slice(1,-1).toString() == "yes") {
                     document.getElementById("swimming").style.width="10%";
                 }
-                if (dataElement[0].walking == "yes") {
+                if (dataElement[0].walking.slice(1,-1).toString() == "yes") {
                     document.getElementById("walking").style.width="10%";
                 }
             })
