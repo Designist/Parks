@@ -249,7 +249,9 @@
             }
         }
         function showPosition(position) {
-            document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
+            if (typeof plat == 'undefined') {
+                document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
+            }
             plat = position.coords.latitude;
             plong = position.coords.longitude;
             if (typeof tableOptions !== 'undefined') {
