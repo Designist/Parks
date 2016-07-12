@@ -16,6 +16,14 @@
         <link rel="stylesheet" href="css/MarkerCluster.css" />
         <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM5HDD5Gj8xe2AVTh7wGiNXJxo-EcRbdw"> </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-80618922-1', 'auto');
+            ga('send', 'pageview');
+        </script>
     </head>
 <body>
     <div class="header">
@@ -296,14 +304,22 @@
 
             // create geoJSON with coordinates and other
             // useful bits from the original data
-            var optionsJSON = ["name", "type", "town", "rowNumber"]
+            var optionsJSON = ["name", "type", "town", "rowNumber", "lat", "long"]
             var geoJSON = Sheetsee.createGeoJSON(gData, optionsJSON)
 
             // create map, tilelayer (map background), markers and popups
             if (map_loaded == false) {
                 map = Sheetsee.loadMap("map")
                 Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
-                markerLayer = Sheetsee.addMarkerLayer(geoJSON, map, "<h2>{{ name }}</h2>", true)
+                markerLayer = Sheetsee.addMarkerLayer(geoJSON, map,
+                    '<h2>{{ name }} <br/>' +
+                    '<img id="sbiking" src ="icons/biking.svg" style="width:0%;">' +
+                    '<img id="shiking" src ="icons/hiking.svg" style="width:0%;">' +
+                    '<img id="spaddling" src ="icons/paddling.svg" style="width:0%;">' +
+                    '<img id="srunning" src ="icons/running.svg" style="width:0%;">' +
+                    '<img id="sswimming" src ="icons/swimming.svg" style="width:0%;">' +
+                    '<img id="swalking" src ="icons/walking.svg" style="width:0%;">' +
+                    '<br/> <a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></h2>', true)
                 map_loaded = true
             }
 
@@ -354,21 +370,27 @@
                 map.setView(selectedCoords, 16)
                 if (dataElement[0].biking == "yes") {
                     document.getElementById("biking").style.width="10%";
+                    //document.getElementById("sbiking").style.width="20px";
                 }
                 if (dataElement[0].hiking == "yes") {
                     document.getElementById("hiking").style.width="10%";
+                    //document.getElementById("shiking").style.width="20px";
                 }
                 if (dataElement[0].paddling == "yes") {
                     document.getElementById("paddling").style.width="10%";
+                    //document.getElementById("spaddling").style.width="20px";
                 }
                 if (dataElement[0].running == "yes") {
                     document.getElementById("running").style.width="10%";
+                    //document.getElementById("srunning").style.width="20px";
                 }
                 if (dataElement[0].swimming == "yes") {
                     document.getElementById("swimming").style.width="10%";
+                    //document.getElementById("sswimming").style.width="20px";
                 }
                 if (dataElement[0].walking == "yes") {
                     document.getElementById("walking").style.width="10%";
+                    //document.getElementById("swalking").style.width="20px";
                 }
             })
 
