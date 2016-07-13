@@ -101,6 +101,7 @@ div#middle {margin-top: 70px;}
 }
 
 /* Partner Slider */
+#slider {margin: 0px auto; width: 275px;}
 .prev, .next {
     display: block;
     line-height: 1;
