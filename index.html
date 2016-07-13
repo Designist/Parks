@@ -242,6 +242,7 @@
         var sorted = false;
         function getLocation() {
             if (navigator.geolocation) {
+                console.log("navigator.geolocation working");
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
             }
             else {
@@ -249,6 +250,7 @@
             }
         }
         function showPosition(position) {
+            console.log("showPosition working");
             if (document.getElementById("hackSpotsTable2") !== null) {
                 document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
             }
