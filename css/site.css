@@ -10,7 +10,7 @@ h4 {font-family: Lato; font-size: 24px;}
 .header img {float: left; padding-left: 20px; padding-right: 20px;}
 .header h1 {position: relative; padding-left: 10%;}
 
-.footer {background-image: url(../footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
+.footer {margin-top: 20px; background-image: url(../footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
 .footer ul {padding-left: 20px;}
 .footer li {text-align: left; font-size: 18px;}
 /* change width of below element to increase margins */
@@ -56,7 +56,7 @@ ul.nav2 li a.active {background-color: #016054;}
 
 #wrapper {/*margin: 0px auto;*/ /*margin-left: 250px;*/}
 div#middle {margin-top: 70px;}
-#wrapper2 {margin: 20px;}
+#wrapper2 {margin: 20px 20px 0px 20px;}
 .textBox {margin-top: 70px; margin-bottom: 20px; background-color: #EFEDE2; column-count: 2; border: 1px solid black;}
 .textBox p {font-size: 14px; padding: 4px; line-height: 19px; font-weight: 300;}
 
