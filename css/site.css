@@ -93,7 +93,6 @@ div#middle {margin-top: 70px;}
   .header h1 {padding-left: 20px;}
   ul.nav {padding-left: 20px; margin-left: 0px;}
   #map {width: 90%; max-width: 100%;}
-  #locField {-webkit-transform: translate3d(0,0,0);}
   #rightSide {width: 100%; max-width: 100%;}
   .resetMap, .clear, .filterText, .footer {display: none;}
   #wrapper {padding-top: 20px;}
