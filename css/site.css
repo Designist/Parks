@@ -34,7 +34,7 @@ code {font-family: "Consolas", "Ubuntu Mono", monospace; line-height: 22px; font
 
 .red-text {color: #FD9393;}
 
-#map {float: left; clear: left; height: 500px; max-width: 530px; min-width: 60%; background: #DADADA; margin-left: 20px;}
+#map {position: relative; float: left; clear: left; height: 500px; max-width: 530px; min-width: 60%; background: #DADADA; margin-left: 20px;}
 #map a {border: none;}
 
 .container {margin: 0px auto;}
