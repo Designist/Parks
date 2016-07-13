@@ -257,7 +257,7 @@
             if (typeof tableOptions !== 'undefined') {
                 showInfo(tableOptions.data);
             }
-            eventFire(document.getElementById('distHeader'), 'click');
+            $("#distHeader").trigger("click")
             $('.spotRow').first().click();
         }
         getLocation();
@@ -267,16 +267,6 @@
             var URL = "1-b4W49NM4tf4_Ysnvv8oqbCAcapi-t6-mN2wFvbkbw4"
                 Tabletop.init({ key: URL, callback: showInfo, simpleSheet: true });
         })
-
-        function eventFire(el, etype) {
-            if (el.fireEvent) {
-                el.fireEvent('on' + etype);
-            } else {
-                var evObj = document.createEvent('Events');
-                evObj.initEvent(etype, true, false);
-                el.dispatchEvent(evObj);
-            }
-        }
 
         $("#locField").keyup(function(event){
             if(event.keyCode == 13){
@@ -295,7 +285,7 @@
                     plat = results[0].geometry.location.lat();
                     plong = results[0].geometry.location.lng();
                     showInfo(tableOptions.data);
-                    eventFire(document.getElementById('distHeader'), 'click');
+                    $("#distHeader").trigger("click")
                     $('.spotRow').first().click()
                     map.setView([plat, plong], 14)
                 }
@@ -346,7 +336,7 @@
                 Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
                 markerLayer = Sheetsee.addMarkerLayer(geoJSON, map,
                     '<h2>{{ name }}' +
-                    '<img id="sbiking" src="icons/biking.svg" style="width:0%;">' +
+                    '<br/> <img id="sbiking" src="icons/biking.svg" style="width:0%;">' +
                     '<img id="shiking" src="icons/hiking.svg" style="width:0%;">' +
                     '<img id="spaddling" src="icons/paddling.svg" style="width:0%;">' +
                     '<img id="srunning" src="icons/running.svg" style="width:0%;">' +
