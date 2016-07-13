@@ -54,7 +54,7 @@ ul.nav2 li a {background-color: #008574; font-size: 18px; font-weight: bolder; b
 ul.nav2 li a:hover:not(.active) {background-color: #016054;}
 ul.nav2 li a.active {background-color: #016054;}
 
-#wrapper {margin: 0px auto; /*margin-left: 250px;*/}
+#wrapper {/*margin: 0px auto;*/ /*margin-left: 250px;*/}
 div#middle {margin-top: 70px;}
 #wrapper2 {margin: 20px;}
 .textBox {margin-top: 70px; margin-bottom: 20px; background-color: #EFEDE2; column-count: 2; border: 1px solid black;}
@@ -93,7 +93,7 @@ div#middle {margin-top: 70px;}
   #map {width: 90%; max-width: 100%;}
   #rightSide {width: 100%; max-width: 100%;}
   .resetMap, .clear, .filterText, .footer {display: none;}
-  #wrapper {max-width: 460px; padding-top: 20px;}
+  #wrapper {padding-top: 20px;}
   #hackSpotsTable, #hackSpotsTable2, #map {min-width: 50%;}
   .embed.basic-embed {background: #EAE4CF;}
 }
