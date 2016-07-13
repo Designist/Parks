@@ -262,7 +262,9 @@
                 showInfo(tableOptions.data);
             }
             console.log("clicking #distHeader");
+            console.log(document.getElementById("distHeader"));
             $("#distHeader").trigger("click");
+            $("#distHeader").click();
             $('.spotRow').first().trigger("click");
         }
         function showError(error) {
