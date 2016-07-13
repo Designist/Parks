@@ -300,7 +300,6 @@
                     plat = results[0].geometry.location.lat();
                     plong = results[0].geometry.location.lng();
                     showInfo(tableOptions.data);
-                    $("#distHeader").trigger("click")
                     $('.spotRow').first().trigger("click");
                     map.setView([plat, plong], 14)
                 }
