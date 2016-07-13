@@ -250,22 +250,14 @@
             }
         }
         function showPosition(position) {
-            console.log("showPosition working");
             if (document.getElementById("hackSpotsTable2") !== null) {
-                console.log("changing hackSpotsTable ID");
                 document.getElementById("hackSpotsTable2").id = "hackSpotsTable";
             }
             plat = position.coords.latitude;
             plong = position.coords.longitude;
             if (typeof tableOptions !== 'undefined') {
-                console.log("tableOptions defined");
                 showInfo(tableOptions.data);
             }
-            console.log("clicking #distHeader");
-            console.log(document.getElementById("distHeader"));
-            $("#distHeader").trigger("click");
-            $("#distHeader").click();
-            $('.spotRow').first().trigger("click");
         }
         function showError(error) {
             switch(error.code) {
@@ -506,6 +498,9 @@
                 numberOfSpots: gData.length
             })
             $('#theNumberofSpots').html(theNumberofSpots)
+
+            $("#distHeader").trigger("click");
+            $('.spotRow').first().trigger("click");
         }
         $(document).on('keyup', '#tableFilter', function() {
             $('.spotRow').first().trigger("click");
