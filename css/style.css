@@ -15,12 +15,12 @@
   th {padding: 10px 0px; border-bottom: 1px solid #ddd;}
   td, text {padding: 3px 0 3px 0; font-size: 14px;}
   #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Merriweather; color: #fff; font-size: 13px; height: 22px;}
-
+  
   .noMatches {margin-left: 5px; margin-right: 5px; font-size: 11px; font-style: italic; visibility: hidden;}
 
 /* Containers */
   .container {margin: 14px 0px;}
-  #map-wrapper {height: 400px; max-width: 800px; background: #DADADA;}
+  #map {height: 400px; max-width: 800px; background: #DADADA;}
   #holder {height: 400px; max-width: 600px; background: #FFE4E4;}
   #bar2 {height: 320px; max-width: 600px; background: #F8CDCD;}
 

@@ -82,9 +82,8 @@
     </div>
     <div id="wrapper">
         <div id="middle">
-            <div id="map-wrapper">
-                <div id="map"></div>
-                <input id="locField" type="text" placeholder="Enter a location" style="position: relative; z-index: 10; float: right; margin: 12px;">
+            <div id="map">
+                <input id="locField" type="text" placeholder="Enter a location" style="position: relative; z-index: 10; float: right; margin: 12px;"></input>
             </div>
             <div id="rightSide">
                 <div id="latestSpot"></div>
@@ -347,7 +346,7 @@
 
             // create map, tilelayer (map background), markers and popups
             if (map_loaded == false) {
-                map = Sheetsee.loadMap("map-wrapper")
+                map = Sheetsee.loadMap("map")
                 Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
                 markerLayer = Sheetsee.addMarkerLayer(geoJSON, map,
                     '<h2>{{ name }}' +
