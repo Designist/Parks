@@ -85,6 +85,7 @@
             <div id="map">
                 <input id="locField" type="text" placeholder="Enter a location" style="position: relative; z-index: 10; float: right; margin: 12px;"></input>
             </div>
+            <input id="locField2" type="text" placeholder="Enter a location" style="display: none; position: relative; z-index: 10; float: right; margin: 12px;"></input>
             <div id="rightSide">
                 <div id="latestSpot"></div>
                 <div id="selectedSpot"></div>
@@ -285,13 +286,23 @@
 
         $("#locField").keyup(function(event){
             if(event.keyCode == 13){
-                updateLoc();
+                updateLoc(false);
             }
         });
 
-        function updateLoc() {
+        $("#locField2").keyup(function(event){
+            if(event.keyCode == 13){
+                updateLoc(true);
+            }
+        });
+
+        function updateLoc(mobile) {
             geocoder = new google.maps.Geocoder();
-            address = document.getElementById("locField").value;
+            if (mobile) {
+                address = document.getElementById("locField2").value;
+            } else {
+                address = document.getElementById("locField").value;
+            }
             geocoder.geocode({ 'address': address }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     if (dist_column == false) {

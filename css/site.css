@@ -98,6 +98,8 @@ div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
   #wrapper {padding-top: 20px;}
   #hackSpotsTable, #hackSpotsTable2, #map {min-width: 50%;}
   .embed.basic-embed {background: #EAE4CF;}
+  #locField {display: none;}
+  #locField2 {display: inherit;}
 }
 
 /* Partner Slider */
