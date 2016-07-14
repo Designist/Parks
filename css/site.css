@@ -55,7 +55,7 @@ ul.nav2 li a:hover:not(.active) {background-color: #016054;}
 ul.nav2 li a.active {background-color: #016054;}
 
 #wrapper {/*margin: 0px auto;*/ /*margin-left: 250px;*/}
-div#middle {margin-top: 70px;}
+div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
 #wrapper2 {margin: 20px 20px 0px 20px;}
 .textBox {margin-top: 70px; margin-bottom: 20px; background-color: #EFEDE2; column-count: 2; border: 1px solid black;}
 .textBox p {font-size: 14px; padding: 4px; line-height: 19px; font-weight: 300;}
