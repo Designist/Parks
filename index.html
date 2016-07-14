@@ -198,12 +198,12 @@
             <br>
             <p id="rdescription" class="descText">Description: {{shortdescription}}. {{description}}</p>
             <br>
-            <img id="rbiking" src ="icons/biking.svg" style="width:0%;">
-            <img id="rhiking" src ="icons/hiking.svg" style="width:0%;">
-            <img id="rpaddling" src ="icons/paddling.svg" style="width:0%;">
-            <img id="rrunning" src ="icons/running.svg" style="width:0%;">
-            <img id="rswimming" src ="icons/swimming.svg" style="width:0%;">
-            <img id="rwalking" src ="icons/walking.svg" style="width:0%;">
+            <img id="rbiking" src ="icons/biking.svg" style="width:10%; display: none;">
+            <img id="rhiking" src ="icons/hiking.svg" style="width:10%; display: none;">
+            <img id="rpaddling" src ="icons/paddling.svg" style="width:10%; display: none;">
+            <img id="rrunning" src ="icons/running.svg" style="width:10%; display: none;">
+            <img id="rswimming" src ="icons/swimming.svg" style="width:10%; display: none;">
+            <img id="rwalking" src ="icons/walking.svg" style="width:10%; display: none;">
             <ul>
                 <li><a href="https://maps.google.com/maps/place/{{lat}},{{long}}" target="_blank">View in Google Maps</a></li>
                 <li><a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></li>
@@ -225,12 +225,12 @@
             <br>
             <p id="description" class="descText">Description: {{shortdescription}}. {{description}}</p>
             <br>
-            <img id="biking" src ="icons/biking.svg" style="width:0%;">
-            <img id="hiking" src ="icons/hiking.svg" style="width:0%;">
-            <img id="paddling" src ="icons/paddling.svg" style="width:0%;">
-            <img id="running" src ="icons/running.svg" style="width:0%;">
-            <img id="swimming" src ="icons/swimming.svg" style="width:0%;">
-            <img id="walking" src ="icons/walking.svg" style="width:0%;">
+            <img id="biking" src ="icons/biking.svg" style="width:10%; display: none;">
+            <img id="hiking" src ="icons/hiking.svg" style="width:10%; display: none;">
+            <img id="paddling" src ="icons/paddling.svg" style="width:10%; display: none;">
+            <img id="running" src ="icons/running.svg" style="width:10%; display: none;">
+            <img id="swimming" src ="icons/swimming.svg" style="width:10%; display: none;">
+            <img id="walking" src ="icons/walking.svg" style="width:10%; display: none;">
             <ul>
                 <li><a href="https://maps.google.com/maps/place/{{lat}},{{long}}" target="_blank">View in Google Maps</a></li>
                 <li><a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></li>
@@ -374,22 +374,22 @@
             map.setView([theLatestSpot.lat, theLatestSpot.long], 16)
 
             if ((theLatestSpot.biking).slice(1,-1) == "yes") {
-                document.getElementById("rbiking").style.width="10%";
+                document.getElementById("rbiking").style.display="inherit";
             }
             if (theLatestSpot.hiking.slice(1,-1) == "yes") {
-                document.getElementById("rhiking").style.width="10%";
+                document.getElementById("rhiking").style.display="inherit";
             }
             if (theLatestSpot.paddling.slice(1,-1) == "yes") {
-                document.getElementById("rpaddling").style.width="10%";
+                document.getElementById("rpaddling").style.display="inherit";
             }
             if (theLatestSpot.running.slice(1,-1) == "yes") {
-                document.getElementById("rrunning").style.width="10%";
+                document.getElementById("rrunning").style.display="inherit";
             }
             if (theLatestSpot.swimming.slice(1,-1) == "yes") {
-                document.getElementById("rswimming").style.width="10%";
+                document.getElementById("rswimming").style.display="inherit";
             }
             if (theLatestSpot.walking.slice(1,-1) == "yes") {
-                document.getElementById("rwalking").style.width="10%";
+                document.getElementById("rwalking").style.display="inherit";
             }
 
             // when someone clicks on a row, highlight it and
@@ -408,28 +408,22 @@
                 var selectedCoords = [dataElement[0].lat, dataElement[0].long]
                 map.setView(selectedCoords, 16);
                 if ((dataElement[0].biking).slice(1,-1) == "yes") {
-                    document.getElementById("biking").style.width="10%";
-                    //document.getElementById("sbiking").style.width="20px";
+                    document.getElementById("biking").style.display="inherit";
                 }
                 if (dataElement[0].hiking.slice(1,-1) == "yes") {
-                    document.getElementById("hiking").style.width="10%";
-                    //document.getElementById("shiking").style.width="20px";
+                    document.getElementById("hiking").style.display="inherit";
                 }
                 if (dataElement[0].paddling.slice(1,-1) == "yes") {
-                    document.getElementById("paddling").style.width="10%";
-                    //document.getElementById("spaddling").style.width="20px";
+                    document.getElementById("paddling").style.display="inherit";
                 }
                 if (dataElement[0].running.slice(1,-1) == "yes") {
-                    document.getElementById("running").style.width="10%";
-                    //document.getElementById("srunning").style.width="20px";
+                    document.getElementById("running").style.display="inherit";
                 }
                 if (dataElement[0].swimming.slice(1,-1) == "yes") {
-                    document.getElementById("swimming").style.width="10%";
-                    //document.getElementById("sswimming").style.width="20px";
+                    document.getElementById("swimming").style.display="inherit";
                 }
                 if (dataElement[0].walking.slice(1,-1) == "yes") {
-                    document.getElementById("walking").style.width="10%";
-                    //document.getElementById("swalking").style.width="20px";
+                    document.getElementById("walking").style.display="inherit";
                 }
             })
 
@@ -467,22 +461,22 @@
                 $('#selectedSpot').html(selectedSpot).css("display", "inline")
 
                 if ((dataElement[0].biking).slice(1,-1) == "yes") {
-                    document.getElementById("biking").style.width="10%";
+                    document.getElementById("biking").style.display="inherit";
                 }
                 if (dataElement[0].hiking.slice(1,-1) == "yes") {
-                    document.getElementById("hiking").style.width="10%";
+                    document.getElementById("hiking").style.display="inherit";
                 }
                 if (dataElement[0].paddling.slice(1,-1) == "yes") {
-                    document.getElementById("paddling").style.width="10%";
+                    document.getElementById("paddling").style.display="inherit";
                 }
                 if (dataElement[0].running.slice(1,-1) == "yes") {
-                    document.getElementById("running").style.width="10%";
+                    document.getElementById("running").style.display="inherit";
                 }
                 if (dataElement[0].swimming.slice(1,-1) == "yes") {
-                    document.getElementById("swimming").style.width="10%";
+                    document.getElementById("swimming").style.display="inherit";
                 }
                 if (dataElement[0].walking.slice(1,-1) == "yes") {
-                    document.getElementById("walking").style.width="10%";
+                    document.getElementById("walking").style.display="inherit";
                 }
             })
 
