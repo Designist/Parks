@@ -350,13 +350,13 @@
                 Sheetsee.addTileLayer(map, 'jllord.n7aml2bc')
                 markerLayer = Sheetsee.addMarkerLayer(geoJSON, map,
                     '<h2>{{ name }}' +
-                    '<br/> <img id="sbiking" src="icons/biking.svg" style="width:0%;">' +
+                    '<br/> <div style="white-space: nowrap;"> <img id="sbiking" src="icons/biking.svg" style="width:0%;">' +
                     '<img id="shiking" src="icons/hiking.svg" style="width:0%;">' +
                     '<img id="spaddling" src="icons/paddling.svg" style="width:0%;">' +
                     '<img id="srunning" src="icons/running.svg" style="width:0%;">' +
                     '<img id="sswimming" src="icons/swimming.svg" style="width:0%;">' +
                     '<img id="swalking" src="icons/walking.svg" style="width:0%;" onload="popup({{biking}},{{hiking}},{{paddling}},{{running}},{{swimming}},{{walking}})">' +
-                    '<br/> <a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></h2>', true)
+                    '</div> <a href="https://www.google.com/maps/dir/Current+Location/{{lat}},{{long}}" target="_blank">Get Directions</a></h2>', true)
                 map_loaded = true
             }
 
