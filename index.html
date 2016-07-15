@@ -191,6 +191,7 @@
     <script id="latestSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">MOST RECENT SPOT</h4>
+            <h4 id="govSpot2" class="fauxButton" style="display: none; background-color: #FFD700; color: #555555;"><img src="icons/star.png" style="height: 1.3em; width:inherit; -webkit-transform: translateY(18%); -ms-transform: translateY(18%); transform: translateY(18%);"> GOVERNOR'S CHOICE</h4>
             <h2>{{name}}</h2>
             <p class="colorText">{{street}} Street<p>
             <p class="colorText">{{town}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
@@ -218,6 +219,7 @@
     <script id="selectedSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">SELECTED SPOT</h4>
+            <h4 id="govSpot" class="fauxButton" style="display: none; background-color: #FFD700; color: #555555;"><img src="icons/star.png" style="height: 1.3em; width:inherit; -webkit-transform: translateY(18%); -ms-transform: translateY(18%); transform: translateY(18%);"> GOVERNOR'S CHOICE</h4>
             <h2>{{name}}</h2>
             <p class="colorText">{{street}} Street<p>
             <p class="colorText">{{town}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
@@ -391,6 +393,9 @@
             if (theLatestSpot.walking.slice(1,-1) == "yes") {
                 document.getElementById("rwalking").style.display="inherit";
             }
+            if (theLatestSpot.gov == 1) {
+                document.getElementById("govSpot2").style.display="inline";
+            }
 
             // when someone clicks on a row, highlight it and
             // re-center the map
@@ -424,6 +429,9 @@
                 }
                 if (dataElement[0].walking.slice(1,-1) == "yes") {
                     document.getElementById("walking").style.display="inherit";
+                }
+                if (dataElement[0].gov == 1) {
+                    document.getElementById("govSpot").style.display="inline";
                 }
             })
 
@@ -477,6 +485,9 @@
                 }
                 if (dataElement[0].walking.slice(1,-1) == "yes") {
                     document.getElementById("walking").style.display="inherit";
+                }
+                if (dataElement[0].gov == 1) {
+                    document.getElementById("govSpot").style.display="inline";
                 }
             })
 
