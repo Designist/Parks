@@ -125,8 +125,9 @@ button:focus {outline:0;}
 
 /* Social Media Sharing */
 #share {justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: flex; background-color: #F9F7F1; width: 100%;}
-#share h4 {font-size: 16px; font-weight: bold; -webkit-margin-before: 1em; -webkit-margin-after: 1em;}
-#share-left {margin: 20px;}
-#share-right {margin-right: 20px;}
+#share h4 {margin: auto; font-size: 16px; font-weight: bold; -webkit-margin-before: 1em; -webkit-margin-after: 1em;}
+#share-left {margin: 20px; width: 65%;}
+#share-right {margin-right: 20px; text-align: center;}
+.hDivider {margin: auto;}
 .share-type {margin-left: 25px;}
-#textarea {height: 150px; -moz-appearance: textfield-multiline; -webkit-appearance: textarea; border: 2px solid gray; font: medium -moz-fixed; font: -webkit-small-control; overflow: auto; padding: 2px; resize: both; width: 80%; resize: none;}
+#textarea {height: 150px; -moz-appearance: textfield-multiline; -webkit-appearance: textarea; border: 2px solid gray; font: medium -moz-fixed; font: -webkit-small-control; overflow: auto; padding: 2px; resize: both; resize: none;}
