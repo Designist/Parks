@@ -126,7 +126,7 @@ button:focus {outline:0;}
 /* Social Media Sharing */
 #share {align-items: center; justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: flex; background-color: #F9F7F1; width: 100%;}
 #share h4 {font-size: 16px; font-weight: bold;}
-#share-left {margin: 20px; width: 65%;}
+#share-left {line-height: 1.5em; font-weight: 300; background-color: white; border-style: groove; margin: 20px; width: 65%;}
 #share-right {margin-right: 20px; text-align: center;}
 .hDivider {margin: auto;}
-#textarea {height: 150px; -moz-appearance: textfield-multiline; -webkit-appearance: textarea; border: 1px solid gray; font: medium -moz-fixed; font: -webkit-small-control; overflow: auto; padding: 2px; resize: both; resize: none;}
+#textarea {height: 150px; -moz-appearance: textfield-multiline; -webkit-appearance: textarea; overflow: auto; padding: 2px; resize: none;}
