@@ -6,11 +6,11 @@ h2 {font-size: 50px; font-family: Amatic SC; font-weight: normal; margin: 11px 0
 h3 {font-family: Amatic SC; font-size: 30px; margin: 10px 0px;}
 h4 {font-family: Lato; font-size: 24px;}
 
-.header {background-image: url(../header.jpg);}
+.header {background-image: url(../img/header.jpg);}
 .header img {float: left; padding-left: 20px; padding-right: 20px;}
 .header h1 {position: relative; padding-left: 10%;}
 
-.footer {margin-top: 20px; background-image: url(../footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
+.footer {margin-top: 20px; background-image: url(../img/footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
 .footer ul {padding-left: 20px;}
 .footer li {text-align: left; font-size: 18px;}
 /* change width of below element to increase margins */
@@ -18,7 +18,8 @@ h4 {font-family: Lato; font-size: 24px;}
 .footer a {border-bottom: none; cursor: pointer; color: #3E3E0A;}
 #partners, #contribute, #connect {width: 100%; margin-top: 210px; margin-left: 20px; margin-right: 20px; text-align: center;}
 #contribute {width: 150%;}
-.divider {border-left: 2px solid #3E3E0A; height: 200px; margin-top: 235px;}
+.vDivider {border-left: 2px solid #3E3E0A; height: 200px; margin-top: 235px;}
+.hDivider {border-top: 1px solid #3E3E0A; width: 190px;}
 
 img {width: 100%;}
 p a, a {color: #333; text-decoration: none; padding-bottom: 0px; border-bottom: 1px #FD9393 solid;}
@@ -58,8 +59,6 @@ ul.nav2 li a.active {background-color: #016054;}
 #wrapper {/*margin: 0px auto;*/ /*margin-left: 250px;*/}
 div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
 #wrapper2 {margin: 20px 20px 0px 20px;}
-.textBox {margin-top: 70px; margin-bottom: 20px; background-color: #EFEDE2; column-count: 2; border: 1px solid black;}
-.textBox p {font-size: 14px; padding: 4px; line-height: 19px; font-weight: 300;}
 
 .button {padding: 5px 5px; background-color: #BEBEBE; font-size: 10px; color: #fff;}
 .button:hover {background: #B9FCFC; color: #47CCFC;}
@@ -106,7 +105,7 @@ div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
   ul.nav {padding-left: 20px; margin-left: 0px;}
   #map-wrapper {width: 90%; max-width: 100%;}
   #rightSide {max-width: 90%;}
-  .filterText, .resetMap, .clear, .footer {display: none;}
+  #resetMap, #clear, .footer, #share {display: none;}
 }
 
 /* Partner Slider */
@@ -123,3 +122,11 @@ div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
 }
 .any-class {display:inline-block;}
 button:focus {outline:0;}
+
+/* Social Media Sharing */
+#share {justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: flex; background-color: #F9F7F1; width: 100%;}
+#share h4 {font-size: 16px; font-weight: bold; -webkit-margin-before: 1em; -webkit-margin-after: 1em;}
+#share-left {margin: 20px;}
+#share-right {margin-right: 20px;}
+.share-type {margin-left: 25px;}
+#textarea {height: 150px; -moz-appearance: textfield-multiline; -webkit-appearance: textarea; border: 2px solid gray; font: medium -moz-fixed; font: -webkit-small-control; overflow: auto; padding: 2px; resize: both; width: 80%; resize: none;}
