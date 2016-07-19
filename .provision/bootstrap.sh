@@ -17,20 +17,22 @@ sudo rm -Rf /var/www
 # symlink /var/www => /vagrant
 ln -s /vagrant /var/www
 
+sudo apt-get -y install python3 pip3
+## DEPRECATED IN FAVOR OF APT-GET INSTALL OF PYTHON 3.4
 # Download and unzip Python 3.5.2
-wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz
-gunzip Python-3.5.2.tgz
-tar -xf Python-3.5.2.tar
-
-# Get and install make
-sudo apt-get -y install make
-
-# Build Python 3.5.2
-cd Python-3.5.2
-./configure
-make
-make install
-python3 --version
+# wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz
+# gunzip Python-3.5.2.tgz
+# tar -xf Python-3.5.2.tar
+#
+# # Get and install make
+# sudo apt-get -y install make
+#
+# # Build Python 3.5.2
+# cd Python-3.5.2
+# ./configure
+# make
+# make install
+# python3 --version
 
 # Install pelican, markdown
 pip3 install pelican markdown

@@ -19,7 +19,7 @@ h4 {font-family: Lato; font-size: 24px;}
 #partners, #contribute, #connect {width: 100%; margin-top: 210px; margin-left: 20px; margin-right: 20px; text-align: center;}
 #contribute {width: 150%;}
 .vDivider {border-left: 2px solid #3E3E0A; height: 200px; margin-top: 235px;}
-.hDivider {border-top: 1px solid #3E3E0A; width: 190px;}
+.hDivider {border-top: 1px solid rgba(0, 0, 0, 0.1); width: 190px;}
 
 img {width: 100%;}
 p a, a {color: #333; text-decoration: none; padding-bottom: 0px; border-bottom: 1px #FD9393 solid;}
@@ -126,9 +126,9 @@ button:focus {outline:0;}
 
 /* Social Media Sharing */
 #share {align-items: center; justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: flex; background-color: #F3F3F3; width: 100%;}
-#share h4 {font-size: 16px; font-weight: bold;}
+#share h4 {color: rgba(0, 0, 0, 0.5); font-size: 16px; font-weight: bold;}
 #share-left {line-height: 1.5em; font-weight: 300; background-color: white; box-shadow: 0 0 2px rgba(0,0,0,.35); margin: 20px; width: 75%;}
 #share-left p {margin: 5px; font-size: 14px;}
+#share-left a {cursor: pointer;}
 #share-right {margin-right: 20px; text-align: center;}
-.hDivider {margin: auto;}
 #textarea {height: 150px; overflow: auto; padding: 2px;}
