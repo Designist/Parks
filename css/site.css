@@ -106,6 +106,7 @@ div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
   #map-wrapper {width: 90%; max-width: 100%;}
   #rightSide {max-width: 90%;}
   #resetMap, #clear, #wrapper3, .footer, .filterText {display: none;}
+  #wrapper2 {padding-top: 10px}
 }
 
 /* Partner Slider */
