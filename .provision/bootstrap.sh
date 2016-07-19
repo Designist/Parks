@@ -17,7 +17,7 @@ sudo rm -Rf /var/www
 # symlink /var/www => /vagrant
 ln -s /vagrant /var/www
 
-sudo apt-get -y install python3 pip3
+sudo apt-get -y install python3-pip
 ## DEPRECATED IN FAVOR OF APT-GET INSTALL OF PYTHON 3.4
 # Download and unzip Python 3.5.2
 # wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz

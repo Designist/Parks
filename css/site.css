@@ -131,4 +131,7 @@ button:focus {outline:0;}
 #share-left p {margin: 5px; font-size: 14px;}
 #share-left a {cursor: pointer;}
 #share-right {margin-right: 20px; text-align: center;}
+#share-right a {color: inherit; border-bottom: 0px;}
+#share-right a:hover {color: #47CCFC;}
+
 #textarea {height: 150px; overflow: auto; padding: 2px;}
