@@ -10,7 +10,7 @@ h4 {font-family: Lato; font-size: 24px;}
 .header img {float: left; padding-left: 20px; padding-right: 20px;}
 .header h1 {position: relative; padding-left: 10%;}
 
-.footer {margin-top: 20px; background-image: url(../img/footer.png); height: 475px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
+.footer {margin-top: 20px; background-image: url(../img/footer.png); height: 475px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
 .footer ul {padding-left: 20px;}
 .footer li {text-align: left; font-size: 18px;}
 /* change width of below element to increase margins */
@@ -125,7 +125,7 @@ div#middle {margin-top: 70px; -webkit-transform: translate3d(0,0,0);}
 button:focus {outline:0;}
 
 /* Social Media Sharing */
-#share {align-items: center; justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: flex; background-color: #F3F3F3; width: 100%;}
+#share {align-items: center; justify-content: space-between; margin-top: 70px; margin-bottom: 20px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; background-color: #F3F3F3; width: 100%;}
 #share h4 {color: rgba(0, 0, 0, 0.5); font-size: 16px; font-weight: bold;}
 #share-left {line-height: 1.5em; font-weight: 300; background-color: white; box-shadow: 0 0 2px rgba(0,0,0,.35); margin: 20px; width: 75%;}
 #share-left p {margin: 5px; font-size: 14px;}
