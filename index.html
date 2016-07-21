@@ -1,4 +1,4 @@
-<html>
+<html class="no-js">
     <head>
         <title>Get Outdoors RI</title>
         <meta charset='utf-8'>
@@ -8,6 +8,7 @@
         <script type="text/javascript" src='js/sheetsee.js'></script>
         <script type="text/javascript" src='js/leaflet.markercluster.js'></script>
         <script type="text/javascript" src="js/jquery.jcarousellite.js"></script>
+        <script src="js/modernizr.js"></script>
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href='https://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css' rel='stylesheet' />
@@ -162,6 +163,9 @@
 
 
     <script type="text/javascript">
+    if (!!Modernizr.flexbox) {
+        alert("Some features may not be supported on your browser. Consider updating to a newer version of Firefox or Chrome.");
+    }
     function updateTable() {
         var text = document.getElementById("tableFilter").value;
         Sheetsee.searchTable(tableOptions, text);
