@@ -10,7 +10,7 @@ h4 {font-family: Lato; font-size: 24px;}
 .header img {float: left; padding-left: 20px; padding-right: 20px;}
 .header h1 {position: relative; padding-left: 10%;}
 
-.footer {margin-top: 20px; background-image: url(../img/footer.png); height: 475px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
+.footer {margin-top: 20px; background-image: url(../img/footer.png); height: 435px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; color: #3E3E0A;}
 .footer ul {padding-left: 20px;}
 .footer li {text-align: left; font-size: 18px;}
 /* change width of below element to increase margins */
@@ -18,7 +18,7 @@ h4 {font-family: Lato; font-size: 24px;}
 .footer a {border-bottom: none; cursor: pointer; color: #3E3E0A;}
 #partners, #contribute, #connect {width: 100%; margin-top: 210px; margin-left: 20px; margin-right: 20px; text-align: center;}
 #contribute {width: 150%;}
-.vDivider {border-left: 2px solid #3E3E0A; height: 200px; margin-top: 235px;}
+.vDivider {border-left: 2px solid #3E3E0A; height: 170px; margin-top: 235px;}
 .hDivider {border-top: 1px solid rgba(0, 0, 0, 0.1); width: 190px;}
 
 img {width: 100%;}
